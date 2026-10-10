@@ -1,0 +1,20 @@
+{
+  "description": "Fixes grep flags that break rg commands before they run (-rn, --include, -E), and when a search finds nothing because its pattern is in the wrong regex dialect, says so before Claude's next step.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          { "type": "command", "command": "node", "args": ["${CLAUDE_PLUGIN_ROOT}/scripts/search-doctor.mjs"], "timeout": 10 }
+        ]
+      }
+    ],
+    "PostToolBatch": [
+      {
+        "hooks": [
+          { "type": "command", "command": "node", "args": ["${CLAUDE_PLUGIN_ROOT}/scripts/search-doctor.mjs"], "timeout": 10 }
+        ]
+      }
+    ]
+  }
+}

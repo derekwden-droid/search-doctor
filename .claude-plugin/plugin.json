@@ -1,0 +1,17 @@
+{
+  "name": "search-doctor",
+  "displayName": "Search Doctor",
+  "version": "1.0.0",
+  "description": "Stops grep habits from silently breaking Claude Code's searches. Fixes rg commands written with grep flags before they run (rg -rn replaces every match with the letter n), and when a Grep or grep search finds nothing because its pattern is in the wrong regex dialect (\\| in ripgrep, a|b in basic grep, \\d in grep), tells Claude the empty result may be the pattern, not the code.",
+  "author": {
+    "name": "Derek Denmark",
+    "url": "https://github.com/derekwden-droid"
+  },
+  "homepage": "https://github.com/derekwden-droid/search-doctor",
+  "repository": "https://github.com/derekwden-droid/search-doctor",
+  "license": "MIT",
+  "keywords": ["ripgrep", "rg", "grep", "regex", "search", "hooks", "developer-experience"],
+  "documentationUrl": "https://github.com/derekwden-droid/search-doctor/blob/main/README.md",
+  "supportUrl": "https://github.com/derekwden-droid/search-doctor/issues",
+  "privacyPolicyUrl": "https://github.com/derekwden-droid/search-doctor/blob/main/PRIVACY.md"
+}
